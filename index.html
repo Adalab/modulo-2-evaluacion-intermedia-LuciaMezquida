@@ -7,13 +7,13 @@
     <title>Evaluación intermedia 2</title>
   </head>
   <body>
-    <section class="game">
+    <section class="game js-game">
       <h1 class="title">Adivina el número</h1>
-      <label class="guess" for="guess">Introduce aquí tu número</label>
+      <label class="guess" for="guess">Introduce aquí tu número:</label>
       <input type="text" name="guess" id="guess" class="number js-number" />
       <input type="button" name="button" id="button" value="Prueba" class="button js-button" />
-      <p class="hint js-hint">Escribe el número y dale a Prueba</p>
-      <p class="counter js-counter">Número de intentos: 0</p>
+      <input class="hint js-hint" value="Pista: Escribe el número y dale a Prueba" />
+      <input class="counter js-counter" value="Número de intentos: 0" />
     </section>
     <script type="text/javascript" src="./main.js"></script>
   </body>
