@@ -14,11 +14,13 @@
   <body>
     <section class="game js-game">
       <h1 class="title">Adivina el número</h1>
-      <label class="guess" for="guess">Introduce aquí tu número:</label>
-      <input type="text" name="guess" id="guess" class="number js-number" />
-      <input type="button" name="button" id="button" value="Prueba" class="button js-button" />
-      <input class="hint js-hint" value="Pista: Escribe el número y dale a Prueba" />
-      <input class="counter js-counter" value="Número de intentos: 0" />
+      <form action="GET">
+        <label class="guess" for="guess">Introduce aquí tu número:</label>
+        <input type="text" name="guess" id="guess" class="number js-number" />
+        <input type="button" name="button" id="button" value="Prueba" class="button js-button" />
+        <input class="hint js-hint" value="Pista: Escribe el número y dale a Prueba" />
+        <input class="counter js-counter" value="Número de intentos: 0" />
+      </form>
     </section>
     <script type="text/javascript" src="./main.js"></script>
   </body>
