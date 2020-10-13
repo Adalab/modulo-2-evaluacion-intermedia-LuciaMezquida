@@ -4,16 +4,17 @@
   padding: 0;
 }
 
-.game {
-  display: flex;
-  flex-direction: column;
-  padding: 100px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-    sans-serif;
-}
 .title {
   font-size: 50px;
   color: rgb(63, 62, 62);
+  padding: 100px 200px 0;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  padding: 0 200px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
 }
 .guess,
 .number,
