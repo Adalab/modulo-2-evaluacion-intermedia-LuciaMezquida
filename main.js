@@ -19,21 +19,18 @@ function checkNumber(){
   console.log('El número introducido es: ' + numberValue)
   if (numberValue < 1 || numberValue > 100) {
     hint.value = 'El número debe estar entre 1 y 100';
-    attempsNumber += 1;
     counter.value = 'Número de intentos: ' + attempsNumber;
   }else if(numberValue > numberToGuess) {
     hint.value = 'Demasiado alto';
-    attempsNumber += 1;
     counter.value = 'Número de intentos: ' + attempsNumber;
   } else if (numberValue < numberToGuess) {
     hint.value = 'Demasiado bajo';
-    attempsNumber += 1;
     counter.value = 'Número de intentos: ' + attempsNumber;
   } else if (numberValue === numberToGuess) {
     hint.value = 'Has ganado Campeona!!!';
-    attempsNumber += 1;
     counter.value = 'Número de intentos: ' + attempsNumber;
   }
+  attempsNumber += 1;
 } 
 
 button.addEventListener('click', checkNumber)
