@@ -1,20 +1,19 @@
 'use strict';
-
-const gameBoard = document.querySelector('.js-game');
+//select html elements within variables
 const number = document.querySelector('.js-number');
 const button = document.querySelector('.js-button');
 const hint = document.querySelector('.js-hint');
 const counter = document.querySelector('.js-counter');
+let attempsNumber = 0;
 
-
-
+//generate random number
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 const numberToGuess = getRandomNumber(100)
-let attempsNumber = 0;
 console.log('Mi número aleatorio es: ' + numberToGuess)
 
+//check random number with input number
 function checkNumber(){
   const numberValue = parseInt(number.value);
   console.log('El número introducido es: ' + numberValue)
