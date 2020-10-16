@@ -3,8 +3,7 @@
 const number = document.querySelector('.js-number');
 const button = document.querySelector('.js-button');
 const hint = document.querySelector('.js-hint');
-const counter = document.querySelector('.js-counter');
-let attempsNumber = 0;
+const counterValue = document.querySelector('.js-counter');
 
 //generate random number
 function getRandomNumber(max) {
@@ -18,19 +17,21 @@ function checkNumber(){
   const numberValue = parseInt(number.value);
   console.log('El número introducido es: ' + numberValue)
   if (numberValue < 1 || numberValue > 100) {
-    hint.value = 'El número debe estar entre 1 y 100';
-    counter.value = 'Número de intentos: ' + attempsNumber;
+    hint.innerHTML = 'El número debe estar entre 1 y 100';
   }else if(numberValue > numberToGuess) {
-    hint.value = 'Demasiado alto';
-    counter.value = 'Número de intentos: ' + attempsNumber;
+    hint.innerHTML = 'Demasiado alto';
   } else if (numberValue < numberToGuess) {
-    hint.value = 'Demasiado bajo';
-    counter.value = 'Número de intentos: ' + attempsNumber;
+    hint.innerHTML = 'Demasiado bajo';
   } else if (numberValue === numberToGuess) {
-    hint.value = 'Has ganado Campeona!!!';
-    counter.value = 'Número de intentos: ' + attempsNumber;
+    hint.innerHTML = 'Has ganado Campeona!!!';
   }
-  attempsNumber += 1;
-} 
+  counter();
+}
+
+let counterAttemps = 0;
+function counter(){
+  counterAttemps++;
+  counterValue.innerHTML = 'Número de intentos: ' + counterAttemps;
+}
 
 button.addEventListener('click', checkNumber)

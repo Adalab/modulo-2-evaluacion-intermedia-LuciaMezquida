@@ -16,10 +16,23 @@
       <h1 class="title">Adivina el número</h1>
       <form class="game" action="GET">
         <label class="guess" for="guess">Introduce aquí tu número:</label>
-        <input type="text" name="guess" id="guess" class="number js-number" />
-        <input type="button" name="button" id="button" value="Prueba" class="button js-button" />
-        <input class="hint js-hint" value="Pista: Escribe el número y dale a Prueba" />
-        <input class="counter js-counter" value="Número de intentos: 0" />
+        <input
+          type="text"
+          name="guess"
+          id="guess"
+          class="number js-number"
+          placeholder="Número del 1 al 100"
+        />
+        <input
+          type="button"
+          name="button"
+          id="button"
+          value="Prueba"
+          class="button js-button"
+          title="Pulsar para validar"
+        />
+        <p class="hint js-hint">Pista: Escribe el número y dale a Prueba</p>
+        <p class="counter js-counter">Número de intentos: 0</p>
       </form>
     </section>
     <script type="text/javascript" src="./main.js"></script>
