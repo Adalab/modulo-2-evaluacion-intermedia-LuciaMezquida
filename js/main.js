@@ -16,14 +16,20 @@ console.log('Mi número aleatorio es: ' + numberToGuess)
 function checkNumber(){
   const numberValue = parseInt(number.value);
   console.log('El número introducido es: ' + numberValue)
-  if (numberValue < 1 || numberValue > 100) {
-    hint.innerHTML = 'El número debe estar entre 1 y 100';
-  }else if(numberValue > numberToGuess) {
-    hint.innerHTML = 'Demasiado alto';
-  } else if (numberValue < numberToGuess) {
-    hint.innerHTML = 'Demasiado bajo';
-  } else if (numberValue === numberToGuess) {
-    hint.innerHTML = 'Has ganado Campeona!!!';
+  if (numberValue >= 1 && numberValue <= 100) {
+    if (numberValue > numberToGuess) {
+      hint.innerHTML = 'Demasiado alto';
+    } else if (numberValue < numberToGuess) {
+      hint.innerHTML = 'Demasiado bajo';
+    } else if(numberValue === numberToGuess) {
+      hint.innerHTML = 'Has ganado Campeona!!!';
+    }
+  } else if (numberValue < 1) {
+    hint.innerHTML = 'El número debe ser mayor de 0';
+  } else if (numberValue > 1) {
+    hint.innerHTML = 'El número debe ser hasta 100';
+  } else if (numberValue.length === undefined) {
+    hint.innerHTML = 'No has introducido ningún valor'
   }
   counter();
 }
