@@ -49,4 +49,10 @@ function reset() {
 }
 
 button.addEventListener('click', checkNumber) 
+document.addEventListener('keydown', function(event){
+  if(event.key === 'Enter') {
+    event.preventDefault();
+    checkNumber()
+  }
+})
 button2.addEventListener('click', reset)
