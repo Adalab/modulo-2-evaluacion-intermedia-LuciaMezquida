@@ -1,8 +1,9 @@
 'use strict';
 //select html elements within variables
 const number = document.querySelector('.js-number');
-const button = document.querySelector('.js-button');
 const hint = document.querySelector('.js-hint');
+const button2 = document.querySelector('.js-button2');
+const button = document.querySelector('.js-button');
 const counterValue = document.querySelector('.js-counter');
 
 //generate random number
@@ -34,10 +35,18 @@ function checkNumber(){
   counter();
 }
 
+//Define counter function
 let counterAttemps = 0;
 function counter(){
   counterAttemps++;
   counterValue.innerHTML = 'Número de intentos: ' + counterAttemps;
 }
 
-button.addEventListener('click', checkNumber)
+//Define reset function
+function reset() {
+  hint.innerHTML = 'Pista: Escribe el número y dale a Prueba'
+  counterValue.innerHTML = 'Número de intentos: 0'
+}
+
+button.addEventListener('click', checkNumber) 
+button2.addEventListener('click', reset)
